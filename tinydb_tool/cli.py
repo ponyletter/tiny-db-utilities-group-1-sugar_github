@@ -104,10 +104,12 @@ def create_parser() -> argparse.ArgumentParser:
         '--where',
         type=str,
         required=True,
-        help='Query condition in the format "field == value" or "field != value". '
+        help='Query condition in the format "field == value", "field != value", '
+             '"field > value", "field < value", "field >= value", or "field <= value". '
              'String values can be quoted with single or double quotes (e.g., \'name == "john"\'). '
-             'Numeric values can be written directly (e.g., \'age == 25\'). '
-             'Examples: \'name == "john"\', \'age != 30\', \'status == "active"\''
+             'Numeric values can be written directly (e.g., \'age > 25\'). '
+             'Numeric operators (>, <, >=, <=) require numeric values. '
+             'Examples: \'name == "john"\', \'age != 30\', \'age > 25\', \'price <= 100\''
     )
     
     # Add --no-pretty flag to disable pretty printing (default is True)
@@ -140,10 +142,12 @@ def create_parser() -> argparse.ArgumentParser:
         '--where',
         type=str,
         required=True,
-        help='Query condition in the format "field == value" or "field != value". '
+        help='Query condition in the format "field == value", "field != value", '
+             '"field > value", "field < value", "field >= value", or "field <= value". '
              'String values can be quoted with single or double quotes (e.g., \'name == "john"\'). '
-             'Numeric values can be written directly (e.g., \'age == 25\'). '
-             'Examples: \'name == "john"\', \'age != 30\', \'status == "active"\''
+             'Numeric values can be written directly (e.g., \'age > 25\'). '
+             'Numeric operators (>, <, >=, <=) require numeric values. '
+             'Examples: \'name == "john"\', \'age != 30\', \'age > 25\', \'price <= 100\''
     )
     
     # Add 'update' subcommand
@@ -167,10 +171,12 @@ def create_parser() -> argparse.ArgumentParser:
         '--where',
         type=str,
         required=True,
-        help='Query condition in the format "field == value" or "field != value". '
+        help='Query condition in the format "field == value", "field != value", '
+             '"field > value", "field < value", "field >= value", or "field <= value". '
              'String values can be quoted with single or double quotes (e.g., \'name == "john"\'). '
-             'Numeric values can be written directly (e.g., \'age == 25\'). '
-             'Examples: \'name == "john"\', \'age != 30\', \'status == "active"\''
+             'Numeric values can be written directly (e.g., \'age > 25\'). '
+             'Numeric operators (>, <, >=, <=) require numeric values. '
+             'Examples: \'name == "john"\', \'age != 30\', \'age > 25\', \'price <= 100\''
     )
     
     # Add required --data argument for update command
